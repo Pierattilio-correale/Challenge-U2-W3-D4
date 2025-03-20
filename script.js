@@ -25,9 +25,9 @@ buttonAPI.addEventListener("click", function () {
       const myRow2 = document.getElementById("bestRow2");
 
       data.photos.forEach((card) => {
-        myRow2.innerHTML += `<div class="col-md-4 esplosione">
-              <div class="card shadow-sm mb-4">
-                 <a href="./index2.html">
+        myRow2.innerHTML += `<div class="col-md-4">
+              <div class="card shadow-sm esplosione mb-4"">
+         <a href="./index2.html">
   <img
     src="${card.src.medium}"
     class="card-img-top bd-placeholder-img"
@@ -45,11 +45,29 @@ buttonAPI.addEventListener("click", function () {
                     class="d-flex align-items-center justify-content-between"
                   >
                     <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-sm"
-                      >
-                        View
+                     <button type="button" class="btn btn-edit btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+View
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn btn-edit btn-outline-secondary btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                        
                       </button>
                       <button
                         type="button"
@@ -121,11 +139,29 @@ buttonAPI2.addEventListener("click", function () {
                     class="d-flex align-items-center justify-content-between"
                   >
                     <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-sm"
-                      >
-                        View
+                     <button type="button" class="btn btn-edit btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+View
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn btn-edit btn-outline-secondary btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                        
                       </button>
                       <button
                         type="button"
