@@ -27,12 +27,15 @@ buttonAPI.addEventListener("click", function () {
       data.photos.forEach((card) => {
         myRow2.innerHTML += `<div class="col-md-4 esplosione">
               <div class="card shadow-sm mb-4">
-                <img
-                  src="${card.src.medium}"
-                  class="card-img-top bd-placeholder-img"
-                />
+                 <a href="./index2.html">
+  <img
+    src="${card.src.medium}"
+    class="card-img-top bd-placeholder-img"
+    alt="Descrizione immagine"
+  />
+</a>
                 <div class="card-body">
-                  <h5 class="card-title">Lorem Ipsum</h5>
+                  <h5 class="card-title">${card.photographer}</h5>
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
@@ -100,12 +103,15 @@ buttonAPI2.addEventListener("click", function () {
       data.photos.forEach((card) => {
         myRow.innerHTML += `<div class="col-md-4">
               <div class="card shadow-sm esplosione mb-4"">
-                <img
-                  src="${card.src.medium}"
-                  class="card-img-top bd-placeholder-img"
-                />
+         <a href="./index2.html">
+  <img
+    src="${card.src.medium}"
+    class="card-img-top bd-placeholder-img"
+    alt="Descrizione immagine"
+  />
+</a>
                 <div class="card-body">
-                  <h5 class="card-title">Lorem Ipsum</h5>
+                  <h5 class="card-title">${card.photographer}</h5>
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
@@ -146,4 +152,9 @@ buttonAPI2.addEventListener("click", function () {
     .catch((err) => {
       console.log("Errore: non è stato trovato il database", err);
     });
+});
+
+const form = document.getElementById("event-form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 });
